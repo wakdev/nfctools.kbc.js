@@ -5,28 +5,30 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- NFC Tools KBC -->
-  <script src="nfctools.kbc.js"></script>
+  <script src="nfctools.kbc.js"></script><!-- Import NFC Tools KBC script -->
   <script type="text/javascript" >
 
-    // Wait for the document is loaded
+    // Wait for the HTML document has been completely loaded and parsed
     document.addEventListener("DOMContentLoaded", function(event) {
 
-      // We register a callback function
+      // Here we register a callback function to get the NFC tag's content
       NFCToolsKBC.getInstance().registerCallback(function(content){
-        // Show the content
+        // Do what you want here with the content
+
+        // For the demo, we show the content in a HTML element
         var target = document.getElementById("kbc-target");
         target.innerHTML = "Content detected: " + content;
       });
+
     });
 
   </script>
 </head>
 <body>
 <div>
-  <h1>Welcome to NFC Tools KBC Test Page</h1>
-  <p>Launch NFC Tools KBC, focus this web page then scan a tag, current status: </p>
-  <p id="kbc-target" style="font-weight:bold;">Waiting for a tag</p>
+  <h1>Welcome to NFC Tools KBC - Test Page</h1>
+  <p>Launch NFC Tools KBC, focus this web page then scan a tag. Current status:</p>
+  <p id="kbc-target">Waiting for a tag</p>
 </div>
 </body>
 </html>
