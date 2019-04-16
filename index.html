@@ -1,1 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>NFC Tools KBC - Test Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- NFC Tools KBC -->
+  <script src="nfctools.kbc.js"></script>
+  <script type="text/javascript" >
+
+    // Wait for the document is loaded
+    document.addEventListener("DOMContentLoaded", function(event) {
+
+      // We register a callback function
+      NFCToolsKBC.getInstance().registerCallback(function(content){
+        // Show the content
+        var target = document.getElementById("kbc-target");
+        target.innerHTML = "Content detected: " + content;
+      });
+    });
+
+  </script>
+</head>
+<body>
+<div>
+  <h1>Welcome to NFC Tools KBC Test Page</h1>
+  <p>Launch NFC Tools KBC, focus this page then scan a tag, current status: </p>
+  <p id="kbc-target" style="font-weight:bold;">Waiting for a tag</p>
+</div>
+</body>
+</html>
