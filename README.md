@@ -4,11 +4,11 @@
 
 Get NFC Tools KBC : https://www.wakdev.com/en/apps/nfc-tools-kbc.html
 
-Author : http://www.wakdev.com
+Author : https://www.wakdev.com
 
 
 Questions & Contact
 -------------------
-Email : sayhi@wakdev.com
+Support : https://support.wakdev.com
 
 Twitter : https://twitter.com/wakdev
